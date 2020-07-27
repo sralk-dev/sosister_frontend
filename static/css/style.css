@@ -3585,12 +3585,15 @@ ul {
 		width: 100%;
 	}
 
-	.header-main-menu .site-nav .site-menu {
-		padding: 30px 0 20px 0;
-		clear: both;
+	.site-menu {
+		padding: 30px 40px 20px 0;
 		width: 100%;
+		background-color: #111111;
 		display: none;
-		z-index: 99999;
+	}
+
+	.site-menu.active {
+		display: block;
 	}
 
 	.header-main-menu .site-nav .site-menu>li {
@@ -3644,7 +3647,7 @@ ul {
 	.header-main-menu .nav-action-elements-layout1 {
 		position: absolute;
 		right: 50px;
-		top: -6px;
+		top: 8px;
 	}
 
 	.header-main-menu .nav-action-elements-layout1 ul li .fill-btn {
@@ -3719,6 +3722,7 @@ ul {
 
 	.header-main-menu.header-fixed .site-logo-mobile .sticky-logo-light {
 		display: none;
+		z-index: 99999;
 	}
 
 	.header-main-menu.header-fixed .site-logo-mobile .sticky-logo-dark {
@@ -3783,6 +3787,7 @@ ul {
 
 	.site-logo-mobile .sticky-logo-light {
 		display: inline-block;
+		z-index: 10;
 	}
 
 	.site-logo-mobile .sticky-logo-dark {

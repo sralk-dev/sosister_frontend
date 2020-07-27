@@ -32,7 +32,8 @@ export default {
     '@/static/css/normalize.css',
     '@/static/css/main.css',
     '@/node_modules/bootstrap/dist/css/bootstrap.min.css',
-    '@/static/css/style.css'
+    '@/static/css/style.css',
+    '@/node_modules/font-awesome/css/font-awesome.min.css'
   ],
   /*
   ** Plugins to load before mounting the App
