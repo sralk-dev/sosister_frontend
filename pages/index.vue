@@ -1,9 +1,17 @@
 <template>
-  <div>asfgsagsa</div>
+  <div>
+    <TrendingRecipes />
+  </div>
 </template>
 
 <script>
-export default {};
+import TrendingRecipes from "../components/TrendingRecipes";
+
+export default {
+  components: {
+    TrendingRecipes,
+  },
+};
 </script>
 
 <style>
