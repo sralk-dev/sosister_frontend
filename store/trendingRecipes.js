@@ -1,15 +1,21 @@
+import SosisterApi from '../services/sosisterApi'
+
 export const state = () => ({
-  recipes: [
-    { id: 1, title: "Хавка для души", category: 'Вкуснятина', rating: 4, description: "3geiojgei fedio jefoij efij ewoifj weoifj owei  iwejfoiwe j0 q0w kdpqwok", cookTime: 13, owner: "Lonh Gewfxz", likes: 17 },
-    { id: 2, title: "Хавка для Самсы", category: 'Вкуснятина', rating: 4, description: "3geiojgei fedio jefoij efij ewoifj weoifj owei  iwejfoiwe j0 q0w kdpqwok", cookTime: 13, owner: "Lonh Gewfxz", likes: 17 },
-    { id: 3, title: "Хавка для души", category: 'Курятина', rating: 2, description: "3geiojgei fedio jefoij efij ewoifj weoifj owei  iwejfoiwe j0 q0w kdpqwok", cookTime: 13, owner: "Lonh Gewfxz", likes: 17 },
-    { id: 4, title: "Хавка для души", category: 'Вкуснятина', rating: 4, description: "3geiojgei fedio jefoij efij ewoifj weoifj owei  iwejfoiwe j0 q0w kdpqwok", cookTime: 13, owner: "Lonh Gewfxz", likes: 17 },
-  ]
+  recipes: []
 })
 
-export const mutations = {}
+export const mutations = {
+  setRecipes(state, recipes) {
+    state.recipes = recipes
+  }
+}
 
-export const actions = {}
+export const actions = {
+  async fetchTrendingRecipes({ commit }) {
+    const recipes = await SosisterApi.getTrendingRecipes()
+    commit('setRecipes', recipes)
+  }
+}
 
 export const getters = {
   recipes(state) {

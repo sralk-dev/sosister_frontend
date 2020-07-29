@@ -7,7 +7,7 @@
             <h2 class="item-heading">TRENDING RECIPES</h2>
           </div>
           <div class="row">
-            <RecipePreview :recipe="recipes[0]" :top="true" />
+            <RecipePreview v-if="recipes.length != 0" :recipe="recipes[0]" :top="true" />
             <RecipePreview v-for="recipe in recipes.slice(1)" :key="recipe.id" :recipe="recipe" />
           </div>
         </div>

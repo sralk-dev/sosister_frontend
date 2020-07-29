@@ -11,13 +11,13 @@
         <h3 class="item-title">
           <a href="single-recipe1.html">{{recipe.title}}</a>
         </h3>
-        <RecipeRating :curRating="recipe.rating" />
+        <RecipeRating :curRating="recipe.score" />
         <p>{{recipe.description}}</p>
         <ul class="entry-meta">
           <li>
             <a href="#">
               <i class="fa fa-clock-o"></i>
-              {{recipe.cookTime}} Mins
+              {{recipe.cookime}} Mins
             </a>
           </li>
           <li>

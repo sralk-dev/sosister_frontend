@@ -11,6 +11,9 @@ export default {
   components: {
     TrendingRecipes,
   },
+  async fetch({ store }) {
+    await store.dispatch("trendingRecipes/fetchTrendingRecipes");
+  },
 };
 </script>
 
