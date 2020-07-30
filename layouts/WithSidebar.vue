@@ -7,9 +7,21 @@
           <div class="col-lg-8">
             <Nuxt />
           </div>
-          <div class="col-lg-4 sidebar-widget-area sidebar-break-md"></div>
+          <div class="col-lg-4 sidebar-widget-area sidebar-break-md">
+            <Subscribe />
+          </div>
         </div>
       </div>
     </section>
   </div>
 </template>
+
+<script>
+import Subscribe from "../components/sidebar/Subscribe";
+
+export default {
+  components: {
+    Subscribe,
+  },
+};
+</script>
