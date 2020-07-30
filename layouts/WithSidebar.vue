@@ -10,6 +10,7 @@
           <div class="col-lg-4 sidebar-widget-area sidebar-break-md">
             <Subscribe />
             <Categories />
+            <LatestRecipes />
           </div>
         </div>
       </div>
@@ -21,12 +22,14 @@
 <script>
 import Subscribe from "../components/sidebar/Subscribe";
 import Categories from "../components/sidebar/Categories";
+import LatestRecipes from "../components/sidebar/LatestRecipes";
 import Footer from "../components/Footer";
 
 export default {
   components: {
     Subscribe,
     Categories,
+    LatestRecipes,
     Footer,
   },
 };
