@@ -13,15 +13,18 @@
         </div>
       </div>
     </section>
+    <Footer />
   </div>
 </template>
 
 <script>
 import Subscribe from "../components/sidebar/Subscribe";
+import Footer from "../components/Footer";
 
 export default {
   components: {
     Subscribe,
+    Footer,
   },
 };
 </script>
