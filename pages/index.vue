@@ -14,6 +14,7 @@ export default {
   },
   async fetch({ store }) {
     await store.dispatch("trendingRecipes/fetchTrendingRecipes");
+    await store.dispatch("sidebar/fetchCategories");
   },
 };
 </script>
