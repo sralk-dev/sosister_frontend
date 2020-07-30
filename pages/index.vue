@@ -8,6 +8,7 @@
 import TrendingRecipes from "../components/TrendingRecipes";
 
 export default {
+  layout: "WithSidebar",
   components: {
     TrendingRecipes,
   },
