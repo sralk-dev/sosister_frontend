@@ -4,8 +4,13 @@
       <h2 class="item-heading">TRENDING RECIPES</h2>
     </div>
     <div class="row">
-      <RecipePreview v-if="recipes.length != 0" :recipe="recipes[0]" :top="true" />
-      <RecipePreview v-for="recipe in recipes.slice(1)" :key="recipe.id" :recipe="recipe" />
+      <RecipePreview v-if="recipes.length != 0" :recipe="recipes[0]" class="col-12" />
+      <RecipePreview
+        v-for="recipe in recipes.slice(1)"
+        :key="recipe.id"
+        :recipe="recipe"
+        class="col-md-6 col-sm-6 col-12"
+      />
     </div>
   </div>
 </template>

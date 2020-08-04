@@ -187,7 +187,7 @@ class SosisterApi {
 
   getRecipes = () => {
     return new Promise((resolve) => {
-      setTimeout(() => resolve(this.recipesData), 50)
+      setTimeout(() => resolve(this.recipesData), 660)
     })
   }
 }

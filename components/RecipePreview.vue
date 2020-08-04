@@ -1,5 +1,5 @@
 <template>
-  <div class="col-12" :class="{'col-md-6 col-sm-6 col-12': !top}">
+  <div>
     <div class="product-box-layout1">
       <figure class="item-figure">
         <a href="single-recipe1.html">
@@ -17,7 +17,7 @@
           <li>
             <a href="#">
               <i class="fa fa-clock-o"></i>
-              {{recipe.cookime}} Mins
+              {{recipe.cooktime}} Mins
             </a>
           </li>
           <li>
