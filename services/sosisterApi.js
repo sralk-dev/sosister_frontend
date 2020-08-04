@@ -113,10 +113,10 @@ class SosisterApi {
   };
 
   categories = [
-    { id: 1, title: 'Курица', recipeNums: 212, image: 'https://www.obed.ru/images/suppliers/restaurants/food/666_big.1537351715.jpg' },
-    { id: 2, title: 'HashChangeEven', recipeNums: 12, image: 'https://avatars.mds.yandex.net/get-zen_doc/108343/pub_5d5813ab998ed600ae726837_5d581441f0d4f400ae21b636/scale_1200' },
-    { id: 3, title: 'Ананас', recipeNums: 65, image: 'https://avatars.mds.yandex.net/get-pdb/236760/a899089c-2536-4e40-a034-430957c5c43e/s1200?webp=false' },
-    { id: 4, title: 'Петр', recipeNums: 24372, image: 'https://www.2m5.ru/images/2019/08/11/wfPI.jpg' },
+    { id: 1, slug: 'kurica', title: 'Курица', recipeNums: 212, image: '@/assets/img/product/product29.jpg' },
+    { id: 2, slug: 'hash', title: 'HashChangeEven', recipeNums: 12, image: '@/assets/img/product/product29.jpg' },
+    { id: 3, slug: 'ananas', title: 'Ананас', recipeNums: 65, image: '@/assets/img/product/product29.jpg' },
+    { id: 4, slug: 'petr', title: 'Петр', recipeNums: 24372, image: '@/assets/img/product/product29.jpg' },
   ]
 
   recipesData = [
@@ -163,31 +163,31 @@ class SosisterApi {
 
   getTopCategories = () => {
     return new Promise((resolve) => {
-      setTimeout(() => resolve(this.topCategoriesData), 1258)
+      setTimeout(() => resolve(this.topCategoriesData), 158)
     });
   }
 
   getLatestRecipes = () => {
     return new Promise((resolve) => {
-      setTimeout(() => resolve(this.latestRecipes), 2201)
+      setTimeout(() => resolve(this.latestRecipes), 201)
     });
   }
 
   getDetailRecipe = () => {
     return new Promise((resolve) => {
-      setTimeout(() => resolve(this.detailRecipe), 2134)
+      setTimeout(() => resolve(this.detailRecipe), 234)
     })
   }
 
   getCategories = () => {
     return new Promise((resolve) => {
-      setTimeout(() => resolve(this.categories), 1000)
+      setTimeout(() => resolve(this.categories), 100)
     })
   }
 
   getRecipes = () => {
     return new Promise((resolve) => {
-      setTimeout(() => resolve(this.recipesData), 500)
+      setTimeout(() => resolve(this.recipesData), 50)
     })
   }
 }

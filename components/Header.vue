@@ -131,9 +131,9 @@
 export default {
   data() {
     return {
-      isActive: false
+      isActive: false,
     };
-  }
+  },
 };
 </script>
 
