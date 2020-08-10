@@ -11,7 +11,10 @@ export default {
   components: {
     Recipes,
   },
-  async fetch({ store }) {
+  async fetch({ store, route }) {
+    if (route.query.page) {
+      store.commit("recipes/setCurrentPage", route.query.page);
+    }
     await store.dispatch("recipes/fetchRecipes");
   },
 };

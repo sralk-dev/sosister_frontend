@@ -1,6 +1,7 @@
 <template>
   <section class="recipe-without-sidebar-wrap padding-top-80 padding-bottom-22">
     <div class="container">
+      <Pagination />
       <div class="row">
         <RecipePreview
           v-for="recipe in recipes"
@@ -15,10 +16,12 @@
 
 <script>
 import RecipePreview from "./RecipePreview";
+import Pagination from "./Pagination";
 
 export default {
   components: {
     RecipePreview,
+    Pagination,
   },
   computed: {
     recipes() {
