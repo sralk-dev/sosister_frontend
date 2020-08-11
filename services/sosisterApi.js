@@ -1,3 +1,5 @@
+import axios from 'axios';
+
 class SosisterApi {
   trendingRecipesData = [
     {
@@ -155,22 +157,18 @@ class SosisterApi {
     },
   ];
 
+  baseUrl = "http://47.254.131.208"
+
   getTrendingRecipes = () => {
-    return new Promise((resolve) => {
-      setTimeout(() => resolve(this.trendingRecipesData), 200)
-    })
+    return axios.get(`${this.baseUrl}/recipes`)
   }
 
   getTopCategories = () => {
-    return new Promise((resolve) => {
-      setTimeout(() => resolve(this.topCategoriesData), 158)
-    });
+    return axios.get(`${this.baseUrl}/categories/`)
   }
 
   getLatestRecipes = () => {
-    return new Promise((resolve) => {
-      setTimeout(() => resolve(this.latestRecipes), 201)
-    });
+    return axios.get(`${this.baseUrl}/recipes`)
   }
 
   getDetailRecipe = () => {
@@ -180,15 +178,11 @@ class SosisterApi {
   }
 
   getCategories = () => {
-    return new Promise((resolve) => {
-      setTimeout(() => resolve(this.categories), 100)
-    })
+    return axios.get(`${this.baseUrl}/categories/`)
   }
 
-  getRecipes = () => {
-    return new Promise((resolve) => {
-      setTimeout(() => resolve(this.recipesData), 660)
-    })
+  getRecipes = (page, pageSize) => {
+    return axios.get(`${this.baseUrl}/recipes/?page=${page}&page_size=${pageSize}`)
   }
 }
 

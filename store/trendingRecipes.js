@@ -13,7 +13,7 @@ export const mutations = {
 export const actions = {
   async fetchTrendingRecipes({ commit }) {
     const recipes = await SosisterApi.getTrendingRecipes()
-    commit('setRecipes', recipes)
+    commit('setRecipes', recipes.data.results.slice(0, 5))
   }
 }
 

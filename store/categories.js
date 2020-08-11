@@ -14,7 +14,7 @@ export const actions = {
   async fetchCategories({ commit }) {
     const categories = await SosisterApi.getCategories()
 
-    commit('setCategories', categories)
+    commit('setCategories', categories.data.results)
   }
 }
 

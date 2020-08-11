@@ -1,5 +1,4 @@
 import SosisterApi from '../services/sosisterApi'
-import axios from 'axios'
 
 export const state = () => ({
   currentPage: 1,
@@ -23,7 +22,7 @@ export const mutations = {
 export const actions = {
   async fetchRecipes({ commit, state }) {
     const { currentPage, onPage } = state
-    const result = await axios.get(`http://47.254.131.208/recipes/?page=${currentPage}&page_size=${onPage}`)
+    const result = await SosisterApi.getRecipes(currentPage, onPage)
 
     commit('setCountRecipes', result.data['count'])
 

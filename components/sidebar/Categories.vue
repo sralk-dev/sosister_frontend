@@ -6,9 +6,9 @@
     <div class="widget-categories">
       <ul>
         <li v-for="category in categories" :key="category.id">
-          <nuxt-link to="#">
+          <nuxt-link :to="'categories/' + category.slug">
             {{category.title}}
-            <span>{{category.count}}</span>
+            <span>{{category.recipes_count}}</span>
           </nuxt-link>
         </li>
       </ul>

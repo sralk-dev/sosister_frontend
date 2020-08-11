@@ -18,12 +18,12 @@ export const actions = {
   async fetchCategories({ commit }) {
     const categories = await SosisterApi.getTopCategories()
 
-    commit('setCategories', categories)
+    commit('setCategories', categories.data.results)
   },
   async fetchLatestRecipes({ commit }) {
     const latestRecipes = await SosisterApi.getLatestRecipes()
 
-    commit('setLatestRecipe', latestRecipes)
+    commit('setLatestRecipe', latestRecipes.data.results.slice(0, 5))
   }
 }
 

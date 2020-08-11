@@ -15,7 +15,7 @@
         <nuxt-link to="#">
           <i class="fa fa-user"></i>
           <span>by</span>
-          {{recipe.owner}}
+          {{recipe.owner.username}}
         </nuxt-link>
       </div>
     </div>
