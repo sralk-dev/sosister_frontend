@@ -4411,6 +4411,10 @@ ul {
 	transition: all 0.3s ease-in-out;
 }
 
+.item-figure img {
+	min-width: 100%;
+}
+
 .product-box-layout1 .item-content {
 	text-align: center;
 	padding: 25px 30px 15px;
