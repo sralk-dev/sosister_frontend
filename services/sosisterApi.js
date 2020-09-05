@@ -181,8 +181,8 @@ class SosisterApi {
     return axios.get(`${this.baseUrl}/categories/`)
   }
 
-  getRecipes = (page, pageSize) => {
-    return axios.get(`${this.baseUrl}/recipes/?page=${page}&page_size=${pageSize}`)
+  getRecipes = (page, pageSize, category) => {
+    return axios.get(`${this.baseUrl}/recipes?page=${page}&page_size=${pageSize}&category=${category}`)
   }
 }
 

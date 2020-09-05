@@ -15,6 +15,7 @@ export default {
     if (route.query.page) {
       store.commit("recipes/setCurrentPage", route.query.page);
     }
+    store.commit("recipes/setCategory", "");
     await store.dispatch("recipes/fetchRecipes");
   },
 };

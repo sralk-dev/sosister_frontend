@@ -4,6 +4,7 @@ export const state = () => ({
   currentPage: 1,
   onPage: 10,
   count: 0,
+  category: '',
   recipes: []
 })
 
@@ -16,13 +17,16 @@ export const mutations = {
   },
   setCountRecipes(state, count) {
     state.count = count
+  },
+  setCategory(state, category) {
+    state.category = category
   }
 }
 
 export const actions = {
   async fetchRecipes({ commit, state }) {
-    const { currentPage, onPage } = state
-    const result = await SosisterApi.getRecipes(currentPage, onPage)
+    const { currentPage, onPage, category } = state
+    const result = await SosisterApi.getRecipes(currentPage, onPage, category)
 
     commit('setCountRecipes', result.data['count'])
 
