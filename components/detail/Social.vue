@@ -19,27 +19,27 @@
         <ul class="inner-share">
           <li>
             <a href="#">
-              <i class="fab fa-facebook-f"></i>
+              <i class="fa fa-facebook-f"></i>
             </a>
           </li>
           <li>
             <a href="#">
-              <i class="fab fa-twitter"></i>
+              <i class="fa fa-twitter"></i>
             </a>
           </li>
           <li>
             <a href="#">
-              <i class="fab fa-linkedin-in"></i>
+              <i class="fa fa-linkedin"></i>
             </a>
           </li>
           <li>
             <a href="#">
-              <i class="fab fa-google-plus-g"></i>
+              <i class="fa fa-google-plus"></i>
             </a>
           </li>
           <li>
             <a href="#">
-              <i class="fab fa-pinterest"></i>
+              <i class="fa fa-pinterest"></i>
             </a>
           </li>
         </ul>

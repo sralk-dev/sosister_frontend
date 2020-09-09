@@ -1,90 +1,59 @@
 <template>
   <div>
-    <div class="ctg-name">PASTA</div>
-    <h2 class="item-title">Chanterelle and Porcini Mushroom Recipes</h2>
+    <div class="ctg-name">
+      <a
+        v-for="category in info.categories"
+        :href="'../categories/' + category.slug"
+        :key="category.slug"
+      >{{category.title + ' '}}</a>
+    </div>
+    <h2 class="item-title">{{info.title}}</h2>
     <div class="d-flex align-items-center justify-content-between flex-wrap mb-5">
       <ul class="entry-meta">
         <li class="single-meta">
           <a href="#">
-            <i class="far fa-calendar-alt"></i>Nov 14,
+            <i class="fa fa-calendar"></i>Nov 14,
             2018
           </a>
         </li>
         <li class="single-meta">
           <a href="#">
-            <i class="fas fa-user"></i>by
-            <span>
-              Kazi
-              Fahim
-            </span>
+            <i class="fa fa-user"></i>by
+            <span>{{info.owner.username}}</span>
           </a>
         </li>
         <li class="single-meta">
-          <ul class="item-rating">
-            <li class="star-fill">
-              <i class="fas fa-star"></i>
-            </li>
-            <li class="star-fill">
-              <i class="fas fa-star"></i>
-            </li>
-            <li class="star-fill">
-              <i class="fas fa-star"></i>
-            </li>
-            <li class="star-fill">
-              <i class="fas fa-star"></i>
-            </li>
-            <li class="star-empty">
-              <i class="fas fa-star"></i>
-            </li>
-            <li>
-              <span>
-                9
-                <span>/ 10</span>
-              </span>
-            </li>
-          </ul>
-        </li>
-        <li class="single-meta">
-          <a href="#">
-            <i class="fas fa-heart"></i>
-            <span>02</span>
-            Likes
-          </a>
+          <RecipeRating :curRating="5" />
         </li>
       </ul>
       <ul class="action-item">
         <li>
           <button>
-            <i class="fas fa-print"></i>
-          </button>
-        </li>
-        <li>
-          <button>
-            <i class="fas fa-expand-arrows-alt"></i>
+            <i class="fa fa-print"></i>
           </button>
         </li>
         <li class="action-share-hover">
           <button>
-            <i class="fas fa-share-alt"></i>
+            <i class="fa fa-share-alt"></i>
           </button>
           <div class="action-share-wrap">
             <a href="#" title="facebook">
-              <i class="fab fa-facebook-f"></i>
+              <i class="fa fa-facebook-f"></i>
             </a>
             <a href="#" title="twitter">
-              <i class="fab fa-twitter"></i>
+              <i class="fa fa-twitter"></i>
             </a>
             <a href="#" title="linkedin">
-              <i class="fab fa-linkedin-in"></i>
+              <i class="fa fa-linkedin-in"></i>
             </a>
             <a href="#" title="pinterest">
-              <i class="fab fa-pinterest-p"></i>
+              <i class="fa fa-pinterest-p"></i>
             </a>
             <a href="#" title="skype">
-              <i class="fab fa-skype"></i>
+              <i class="fa fa-skype"></i>
             </a>
             <a href="#" title="rss">
-              <i class="fas fa-rss"></i>
+              <i class="fa fa-rss"></i>
             </a>
           </div>
         </li>
@@ -96,11 +65,11 @@
           <div class="feature-wrap">
             <div class="media">
               <div class="feature-icon">
-                <i class="far fa-clock"></i>
+                <i class="fa fa-clock-o"></i>
               </div>
               <div class="media-body space-sm">
                 <div class="feature-title">PREP TIME</div>
-                <div class="feature-sub-title">45 Mins</div>
+                <div class="feature-sub-title">{{info.prepTime}} Mins</div>
               </div>
             </div>
           </div>
@@ -109,11 +78,11 @@
           <div class="feature-wrap">
             <div class="media">
               <div class="feature-icon">
-                <i class="fas fa-utensils"></i>
+                <i class="fa fa-cutlery"></i>
               </div>
               <div class="media-body space-sm">
                 <div class="feature-title">COOK TIME</div>
-                <div class="feature-sub-title">45 Mins</div>
+                <div class="feature-sub-title">{{info.cookTime}} Mins</div>
               </div>
             </div>
           </div>
@@ -122,7 +91,7 @@
           <div class="feature-wrap">
             <div class="media">
               <div class="feature-icon">
-                <i class="fas fa-users"></i>
+                <i class="fa fa-users"></i>
               </div>
               <div class="media-body space-sm">
                 <div class="feature-title">SERVING</div>
@@ -135,24 +104,33 @@
           <div class="feature-wrap">
             <div class="media">
               <div class="feature-icon">
-                <i class="far fa-eye"></i>
+                <i class="fa fa-eye"></i>
               </div>
               <div class="media-body space-sm">
                 <div class="feature-title">VIEWS</div>
-                <div class="feature-sub-title">3,450</div>
+                <div class="feature-sub-title">{{info.views}}</div>
               </div>
             </div>
           </div>
         </li>
       </ul>
     </div>
-    <p class="item-description">
-      More off this less hello salamander lied porpoise much over tightly
-      circa horse taped so innocuously side crudey mightily rigorous plot life. New homes in
-      particular are subject.All recipes created with FoodiePress have suport for Micoformats and
-      Google Recipe View. Schema.org is a collaboration byo improve the web by creatinegaera
-      structured data markup.More off this less hello salamander lied porpoise much over tightly
-      circa horse tapedey innocuously.
-    </p>
+    <p class="item-description">{{info.description}}</p>
   </div>
 </template>
+
+
+<script>
+import RecipeRating from "../../widgets/RecipeRating";
+
+export default {
+  components: {
+    RecipeRating,
+  },
+  computed: {
+    info() {
+      return this.$store.getters["detail/info"];
+    },
+  },
+};
+</script>

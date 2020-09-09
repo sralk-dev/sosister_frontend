@@ -171,10 +171,8 @@ class SosisterApi {
     return axios.get(`${this.baseUrl}/recipes`)
   }
 
-  getDetailRecipe = () => {
-    return new Promise((resolve) => {
-      setTimeout(() => resolve(this.detailRecipe), 234)
-    })
+  getDetailRecipe = (slug) => {
+    return axios.get(`${this.baseUrl}/recipes/${slug}`)
   }
 
   getCategories = () => {

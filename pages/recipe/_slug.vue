@@ -5,10 +5,10 @@
         <Info />
         <div class="making-elements-wrap">
           <div class="row">
-            <div class="col-xl-6 col-12">
+            <div class="col-xl-6 col-12 align-self-center">
               <Ingredients />
             </div>
-            <div class="col-xl-6 col-12">
+            <div class="col-xl-6 col-12 align-self-stretch">
               <Nutritions />
             </div>
           </div>
@@ -34,6 +34,9 @@ export default {
     Nutritions,
     Directions,
     Social,
+  },
+  async fetch({ store, route }) {
+    await store.dispatch("detail/fetchDetailRecipe", route.params.slug);
   },
 };
 </script>

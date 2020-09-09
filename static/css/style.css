@@ -7391,6 +7391,14 @@ ul {
 	text-align: center;
 }
 
+.ctg-name a {
+	color: #ff4a52;
+}
+
+.ctg-name a:hover {
+	color: #ca3b42;
+}
+
 .single-recipe-layout2 .item-title {
 	font-weight: 700;
 	margin-bottom: 30px;
