@@ -2,15 +2,15 @@
   <div>
     <div class="product-box-layout1">
       <figure class="item-figure">
-        <a :href="'recipe/' + recipe.slug">
+        <nuxt-link :to="'recipe/' + recipe.slug">
           <img v-if="recipe.poster" :src="recipe.poster" alt="Product" />
           <img v-else src="@/assets/img/product/product5.jpg" alt="Product" />
-        </a>
+        </nuxt-link>
       </figure>
       <div class="item-content">
         <span class="sub-title">Категория</span>
         <h3 class="item-title">
-          <a :href="'recipe/' + recipe.slug">{{recipe.title}}</a>
+          <nuxt-link :to="'recipe/' + recipe.slug">{{recipe.title}}</nuxt-link>
         </h3>
         <RecipeRating :curRating="5" />
         <p>{{recipe.description}}</p>

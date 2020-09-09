@@ -4,8 +4,8 @@
       <i class="fa fa-list-ul"></i>Ingredients
     </h3>
     <div v-for="ingredient in ingredients" :key="ingredient.slug" class="checkbox checkbox-primary">
-      <input id="checkbox1" type="checkbox" />
-      <label for="checkbox1">{{ingredient.base_weight}} {{ingredient.title}}</label>
+      <input :id="'checkbox-' + ingredient.slug" type="checkbox" />
+      <label :for="'checkbox-' + ingredient.slug">{{ingredient.base_weight}} {{ingredient.title}}</label>
     </div>
   </div>
 </template>

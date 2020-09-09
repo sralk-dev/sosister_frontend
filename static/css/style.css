@@ -11088,6 +11088,7 @@ ul {
 }
 
 .widget-latest ul.block-list .single-item .item-img {
+	width: 90px;
 	margin-right: 15px;
 	margin-top: 5px;
 	position: relative;
@@ -11105,6 +11106,10 @@ ul {
 	-ms-transition: all 0.3s ease-in-out;
 	-o-transition: all 0.3s ease-in-out;
 	transition: all 0.3s ease-in-out;
+}
+
+.item-img a {
+	min-width: 100%;
 }
 
 .widget-latest ul.block-list .single-item .item-img .count-number {

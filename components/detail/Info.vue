@@ -1,11 +1,11 @@
 <template>
   <div>
     <div class="ctg-name">
-      <a
+      <nuxt-link
         v-for="category in info.categories"
-        :href="'../categories/' + category.slug"
+        :to="'../categories/' + category.slug"
         :key="category.slug"
-      >{{category.title + ' '}}</a>
+      >{{category.title + ' '}}</nuxt-link>
     </div>
     <h2 class="item-title">{{info.title}}</h2>
     <div class="d-flex align-items-center justify-content-between flex-wrap mb-5">
