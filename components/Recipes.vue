@@ -1,5 +1,5 @@
 <template>
-  <section class="recipe-without-sidebar-wrap padding-top-80 padding-bottom-22">
+  <section class="recipe-without-sidebar-wrap padding-bottom-22">
     <div class="container">
       <Pagination />
       <div class="row">

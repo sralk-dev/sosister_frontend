@@ -1,7 +1,7 @@
 <template>
   <div class="widget">
     <div class="section-heading heading-dark">
-      <h3 class="item-heading">SUBSCRIBE &amp; FOLLOW</h3>
+      <h3 class="item-heading">Подписка</h3>
     </div>
     <div class="widget-follow-us">
       <ul>

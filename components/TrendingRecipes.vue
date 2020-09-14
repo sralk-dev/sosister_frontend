@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="section-heading heading-dark">
-      <h2 class="item-heading">TRENDING RECIPES</h2>
+      <h2 class="item-heading">Популярные рецепты</h2>
     </div>
     <div class="row">
       <RecipePreview v-if="recipes.length != 0" :recipe="recipes[0]" class="col-12" />

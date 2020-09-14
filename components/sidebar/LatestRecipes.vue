@@ -1,7 +1,7 @@
 <template>
   <div class="widget">
     <div class="section-heading heading-dark">
-      <h3 class="item-heading">LATEST RECIPES</h3>
+      <h3 class="item-heading">Последние рецепты</h3>
     </div>
     <div class="widget-latest">
       <ul class="block-list">

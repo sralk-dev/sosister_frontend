@@ -2,13 +2,19 @@
   <div>
     <div class="product-box-layout1">
       <figure class="item-figure">
-        <nuxt-link :to="'recipe/' + recipe.slug">
+        <nuxt-link :to="'/recipe/' + recipe.slug">
           <img v-if="recipe.poster" :src="recipe.poster" alt="Product" />
           <img v-else src="@/assets/img/product/product5.jpg" alt="Product" />
         </nuxt-link>
       </figure>
       <div class="item-content">
-        <span class="sub-title">Категория</span>
+        <span class="sub-title">
+          <nuxt-link
+            v-for="category in recipe.categories"
+            :to="'../categories/' + category.slug"
+            :key="category.slug"
+          >{{category.title + ' '}}</nuxt-link>
+        </span>
         <h3 class="item-title">
           <nuxt-link :to="'recipe/' + recipe.slug">{{recipe.title}}</nuxt-link>
         </h3>
@@ -18,19 +24,13 @@
           <li>
             <a href="#">
               <i class="fa fa-clock-o"></i>
-              {{recipe.cook_time}} Mins
+              {{recipe.cook_time}} мин.
             </a>
           </li>
           <li>
             <a href="#">
-              <i class="fa fa-user"></i>by
+              <i class="fa fa-user"></i>
               <span>{{recipe.owner.username}}</span>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <i class="fa fa-heart"></i>
-              <span>{{5}}</span> Likes
             </a>
           </li>
         </ul>

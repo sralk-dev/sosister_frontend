@@ -44,5 +44,8 @@ export const getters = {
   },
   currentPage(state) {
     return state.currentPage
+  },
+  showRecipes(state) {
+    return state.recipes.length == 0 ? false : true
   }
 }

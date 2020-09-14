@@ -10,7 +10,7 @@
         <h3 class="item-title">
           <nuxt-link :to="'categories/' + category.slug">{{category.title}}</nuxt-link>
         </h3>
-        <span class="sub-title">{{category.recipes_count}} Recipes</span>
+        <span class="sub-title">{{category.recipes_count}} рец.</span>
       </div>
     </div>
   </div>

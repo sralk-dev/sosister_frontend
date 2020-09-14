@@ -1859,7 +1859,7 @@ ul {
 	margin-bottom: 0;
 	font-family: 'Hind', sans-serif;
 	font-size: 24px;
-	font-weight: 600;
+	/*font-weight: 600;*/
 }
 
 @media only screen and (max-width: 767px) {
@@ -11892,4 +11892,12 @@ Other styles
 .nutrition-wrap {
 	height: 100%;
 	margin: 0;
+}
+
+.sub-title a {
+	color: #ff4a52;
+}
+
+.item-ctg a {
+	color: #ff4a52;
 }

@@ -1,7 +1,7 @@
 <template>
   <div class="widget">
     <div class="section-heading heading-dark">
-      <h3 class="item-heading">CATEGORIES</h3>
+      <h3 class="item-heading">Топ категории</h3>
     </div>
     <div class="widget-categories">
       <ul>

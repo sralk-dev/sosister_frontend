@@ -1,7 +1,12 @@
 <template>
   <div>
-    <h1>{{$route.params.category}}</h1>
-    <Recipes />
+    <div class="category__title">
+      <h1>Категория: {{$route.params.category}}</h1>
+    </div>
+    <Recipes v-if="showRecipes" />
+    <div v-else>
+      <p>Для данной категории пока нет рецептов.</p>
+    </div>
   </div>
 </template>
 
@@ -21,5 +26,17 @@ export default {
     store.commit("recipes/setCategory", route.params.category);
     await store.dispatch("recipes/fetchRecipes");
   },
+  computed: {
+    showRecipes() {
+      return this.$store.getters["recipes/showRecipes"];
+    },
+  },
 };
 </script>
+
+<style scoped>
+.category__title h1 {
+  padding: 20px 0;
+  text-align: center;
+}
+</style>
