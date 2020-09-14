@@ -7339,7 +7339,7 @@ ul {
 }
 
 .single-recipe-layout2 {
-	transform: translateY(-100px);
+	transform: translateY(-60px);
 	padding: 50px 100px 0;
 	margin-bottom: -100px;
 	z-index: 8;

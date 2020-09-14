@@ -73,5 +73,9 @@ export const getters = {
 
   directions(state) {
     return state.recipe.steps
+  },
+
+  poster(state) {
+    return state.recipe.poster
   }
 }

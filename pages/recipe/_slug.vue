@@ -1,25 +1,29 @@
 <template>
-  <section class="single-recipe-wrap-layout2 padding-bottom-80">
-    <div class="container">
-      <div class="single-recipe-layout2">
-        <Info />
-        <div class="making-elements-wrap">
-          <div class="row">
-            <div class="col-xl-6 col-12 align-self-center">
-              <Ingredients />
-            </div>
-            <div class="col-xl-6 col-12 align-self-stretch">
-              <Nutritions />
+  <div>
+    <Poster />
+    <section class="single-recipe-wrap-layout2 padding-bottom-80">
+      <div class="container">
+        <div class="single-recipe-layout2">
+          <Info />
+          <div class="making-elements-wrap">
+            <div class="row">
+              <div class="col-xl-6 col-12 align-self-center">
+                <Ingredients />
+              </div>
+              <div class="col-xl-6 col-12 align-self-stretch">
+                <Nutritions />
+              </div>
             </div>
           </div>
+          <Directions />
         </div>
-        <Directions />
       </div>
-    </div>
-  </section>
+    </section>
+  </div>
 </template>
 
 <script>
+import Poster from "../../components/detail/Poster";
 import Info from "../../components/detail/Info";
 import Ingredients from "../../components/detail/Ingredients";
 import Nutritions from "../../components/detail/Nutritions";
@@ -28,6 +32,7 @@ import Social from "../../components/detail/Social";
 
 export default {
   components: {
+    Poster,
     Info,
     Ingredients,
     Nutritions,
