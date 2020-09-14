@@ -1,7 +1,7 @@
 <template>
   <div class="nutrition-wrap">
     <h3 class="item-title">
-      <i class="fa fa-info"></i>Nutrition
+      <i class="fa fa-info"></i>Состав
     </h3>
     <ul class="nutrition-list">
       <li v-for="nutrition in nutritions" :key="nutrition">

@@ -1,7 +1,7 @@
 <template>
   <div class="ingridients-wrap">
     <h3 class="item-title">
-      <i class="fa fa-list-ul"></i>Ingredients
+      <i class="fa fa-list-ul"></i>Ингредиенты
     </h3>
     <div v-for="ingredient in ingredients" :key="ingredient.slug" class="checkbox checkbox-primary">
       <input :id="'checkbox-' + ingredient.slug" type="checkbox" />

@@ -11,14 +11,12 @@
     <div class="d-flex align-items-center justify-content-between flex-wrap mb-5">
       <ul class="entry-meta">
         <li class="single-meta">
-          <a href="#">
-            <i class="fa fa-calendar"></i>Nov 14,
-            2018
-          </a>
+          <i class="fa fa-calendar"></i>
+          {{date}}
         </li>
         <li class="single-meta">
           <a href="#">
-            <i class="fa fa-user"></i>by
+            <i class="fa fa-user"></i>
             <span>{{info.owner.username}}</span>
           </a>
         </li>
@@ -44,7 +42,7 @@
               <i class="fa fa-twitter"></i>
             </a>
             <a href="#" title="linkedin">
-              <i class="fa fa-linkedin-in"></i>
+              <i class="fa fa-linkedin"></i>
             </a>
             <a href="#" title="pinterest">
               <i class="fa fa-pinterest-p"></i>
@@ -68,8 +66,8 @@
                 <i class="fa fa-clock-o"></i>
               </div>
               <div class="media-body space-sm">
-                <div class="feature-title">PREP TIME</div>
-                <div class="feature-sub-title">{{info.prepTime}} Mins</div>
+                <div class="feature-title">Подготовка</div>
+                <div class="feature-sub-title">{{info.prepTime}} мин.</div>
               </div>
             </div>
           </div>
@@ -81,8 +79,8 @@
                 <i class="fa fa-cutlery"></i>
               </div>
               <div class="media-body space-sm">
-                <div class="feature-title">COOK TIME</div>
-                <div class="feature-sub-title">{{info.cookTime}} Mins</div>
+                <div class="feature-title">Готовка</div>
+                <div class="feature-sub-title">{{info.cookTime}} мин.</div>
               </div>
             </div>
           </div>
@@ -94,8 +92,8 @@
                 <i class="fa fa-users"></i>
               </div>
               <div class="media-body space-sm">
-                <div class="feature-title">SERVING</div>
-                <div class="feature-sub-title">10 People</div>
+                <div class="feature-title">Сервировка</div>
+                <div class="feature-sub-title">10 персон</div>
               </div>
             </div>
           </div>
@@ -107,7 +105,7 @@
                 <i class="fa fa-eye"></i>
               </div>
               <div class="media-body space-sm">
-                <div class="feature-title">VIEWS</div>
+                <div class="feature-title">Просмотры</div>
                 <div class="feature-sub-title">{{info.views}}</div>
               </div>
             </div>
@@ -130,6 +128,9 @@ export default {
   computed: {
     info() {
       return this.$store.getters["detail/info"];
+    },
+    date() {
+      return this.info.dtcreate.slice(0, 10);
     },
   },
 };

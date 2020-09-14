@@ -6,8 +6,8 @@
         <div class="single-recipe-layout2">
           <Info />
           <div class="making-elements-wrap">
-            <div class="row">
-              <div class="col-xl-6 col-12 align-self-center">
+            <div class="row" style="margin: 0 0 30px 0">
+              <div class="col-xl-6 col-12 align-self-stretch">
                 <Ingredients />
               </div>
               <div class="col-xl-6 col-12 align-self-stretch">

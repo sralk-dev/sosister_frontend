@@ -11883,3 +11883,13 @@ Other styles
 .directions-item {
 	color: #ff4a52;
 }
+
+.ingridients-wrap {
+	height: 100%;
+	margin: 0;
+}
+
+.nutrition-wrap {
+	height: 100%;
+	margin: 0;
+}
