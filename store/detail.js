@@ -72,6 +72,6 @@ export const getters = {
   },
 
   directions(state) {
-    return state.recipe
+    return state.recipe.steps
   }
 }

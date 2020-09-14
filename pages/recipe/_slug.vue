@@ -14,7 +14,6 @@
           </div>
         </div>
         <Directions />
-        <Social />
       </div>
     </div>
   </section>
