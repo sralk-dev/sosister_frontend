@@ -4,12 +4,6 @@
       <div class="row">
         <div class="col-lg-12">
           <div class="error-content-box">
-            <div class="error-figure-wrap">
-              <img src="@/assets/img/figure/404.png" alt="404" class="img-fluid" />
-              <div class="error-center-figure">
-                <img src="@/assets/img/figure/404-middle.png" alt="404" class="img-fluid" />
-              </div>
-            </div>
             <h2 class="item-title">Страница не найдена!</h2>
             <p class="item-details">Страница не найдена. Пройдите на главную по кнопке внизу.</p>
             <nuxt-link to="/" class="item-btn">Главная</nuxt-link>
@@ -19,3 +13,11 @@
     </div>
   </section>
 </template>
+
+<script>
+export default {
+  destroyed: function () {
+    this.$store.commit("error/resetError");
+  },
+};
+</script>

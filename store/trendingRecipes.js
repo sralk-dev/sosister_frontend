@@ -12,8 +12,12 @@ export const mutations = {
 
 export const actions = {
   async fetchTrendingRecipes({ commit }) {
-    const recipes = await SosisterApi.getTrendingRecipes()
-    commit('setRecipes', recipes.data.results.slice(0, 5))
+    try {
+      const recipes = await SosisterApi.getTrendingRecipes()
+      commit('setRecipes', recipes.data.results.slice(0, 5))
+    } catch (e) {
+      commit("error/setError", { error: e.message, code: null }, { root: true });
+    }
   }
 }
 

@@ -12,9 +12,13 @@ export const mutations = {
 
 export const actions = {
   async fetchCategories({ commit }) {
-    const categories = await SosisterApi.getCategories()
+    try {
+      const categories = await SosisterApi.getCategories()
 
-    commit('setCategories', categories.data.results)
+      commit('setCategories', categories.data.results)
+    } catch (e) {
+      commit("error/setError", { error: e.message, code: null }, { root: true });
+    }
   }
 }
 

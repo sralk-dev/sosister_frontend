@@ -25,12 +25,16 @@ export const mutations = {
 
 export const actions = {
   async fetchRecipes({ commit, state }) {
-    const { currentPage, onPage, category } = state
-    const result = await SosisterApi.getRecipes(currentPage, onPage, category)
+    try {
+      const { currentPage, onPage, category } = state
+      const result = await SosisterApi.getRecipes(currentPage, onPage, category)
 
-    commit('setCountRecipes', result.data['count'])
+      commit('setCountRecipes', result.data['count'])
 
-    commit('setRecipes', result.data['results'])
+      commit('setRecipes', result.data['results'])
+    } catch (e) {
+      commit("error/setError", { error: e.message, code: null }, { root: true });
+    }
   }
 }
 

@@ -16,14 +16,22 @@ export const mutations = {
 
 export const actions = {
   async fetchCategories({ commit }) {
-    const categories = await SosisterApi.getTopCategories()
+    try {
+      const categories = await SosisterApi.getTopCategories()
 
-    commit('setCategories', categories.data.results)
+      commit('setCategories', categories.data.results)
+    } catch (e) {
+      commit("error/setError", { error: e.message, code: null }, { root: true });
+    }
   },
   async fetchLatestRecipes({ commit }) {
-    const latestRecipes = await SosisterApi.getLatestRecipes()
+    try {
+      const latestRecipes = await SosisterApi.getLatestRecipes()
 
-    commit('setLatestRecipe', latestRecipes.data.results.slice(0, 5))
+      commit('setLatestRecipe', latestRecipes.data.results.slice(0, 5))
+    } catch (e) {
+      commit("error/setError", { error: e.message, code: null }, { root: true });
+    }
   }
 }
 

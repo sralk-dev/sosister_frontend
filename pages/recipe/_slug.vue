@@ -42,5 +42,10 @@ export default {
   async fetch({ store, route }) {
     await store.dispatch("detail/fetchDetailRecipe", route.params.slug);
   },
+  computed: {
+    hasError() {
+      return this.$store.getters["error/error"];
+    },
+  },
 };
 </script>
