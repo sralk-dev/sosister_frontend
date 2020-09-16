@@ -158,29 +158,32 @@ class SosisterApi {
   ];
 
   baseUrl = "http://47.254.131.208"
+  settings = {
+    port: 8093
+  }
 
   getTrendingRecipes = () => {
-    return axios.get(`${this.baseUrl}/recipes`)
+    return axios.get(`${this.baseUrl}/recipes`, this.settings)
   }
 
   getTopCategories = () => {
-    return axios.get(`${this.baseUrl}/categories/`)
+    return axios.get(`${this.baseUrl}/categories/`, this.settings)
   }
 
   getLatestRecipes = () => {
-    return axios.get(`${this.baseUrl}/recipes`)
+    return axios.get(`${this.baseUrl}/recipes`, this.settings)
   }
 
   getDetailRecipe = (slug) => {
-    return axios.get(`${this.baseUrl}/recipes/${slug}`)
+    return axios.get(`${this.baseUrl}/recipes/${slug}`, this.settings)
   }
 
   getCategories = () => {
-    return axios.get(`${this.baseUrl}/categories/`)
+    return axios.get(`${this.baseUrl}/categories/`, this.settings)
   }
 
   getRecipes = (page, pageSize, category) => {
-    return axios.get(`${this.baseUrl}/recipes?page=${page}&page_size=${pageSize}&category=${category}`)
+    return axios.get(`${this.baseUrl}/recipes?page=${page}&page_size=${pageSize}&category=${category}`, this.settings)
   }
 }
 
